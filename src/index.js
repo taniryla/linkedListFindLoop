@@ -84,6 +84,9 @@ function findLoop(head) {
     slow = slow.next;
     counter2++;
   }
+  if (slow.value === fast.value){
+
+  }
 
   // return the loop
 }
