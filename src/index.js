@@ -69,5 +69,10 @@ class LinkedList {
 
 function findLoop(head) {
   // Write your code here.
+  // set current at 1, fast and slow pointers equal head
+  // when head.value equals a previous value
+  // how we do figure out if it was a previous value? 
+  
+  counter?
 }
 
