@@ -70,21 +70,17 @@ class LinkedList {
 function findLoop(head) {
   // Write your code here.
   // set counter at 1, fast and slow pointers equal head
-  let counter = 1;
-  let counter2 = 1;
-  let slow = head;
-  let fast = head;
+  let slow = head.next;
+  let fast = head.next.next;
   // when head.value < counter it equals a previous value
-  while (slow.value !== fast.value){
+  while (slow !== fast){
     slow = slow.next;
     fast = fast.next.next;
-    counter++;
   }
-slow.value = head;
+slow = head;
 while (slow.value !== fast.value){
   slow = slow.next;
-  fast = fast.next.next;
-  counter++;
+  fast = fast.next;
 }
 
   // return the loop
