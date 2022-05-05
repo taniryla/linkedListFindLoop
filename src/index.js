@@ -82,7 +82,7 @@ while (slow.value !== fast.value){
   slow = slow.next;
   fast = fast.next;
 }
-
   // return the loop
+  return slow;
 }
 
