@@ -75,18 +75,17 @@ function findLoop(head) {
   let slow = head;
   let fast = head;
   // when head.value < counter it equals a previous value
-  while (head.value < counter){
-    fast = fast.next;
+  while (slow.value !== fast.value){
+    slow = slow.next;
+    fast = fast.next.next;
     counter++;
   }
-  let k = counter - head.value;
-  while (counter2 <= k) {
-    slow = slow.next;
-    counter2++;
-  }
-  if (slow.value === fast.value){
-
-  }
+slow.value = head;
+while (slow.value !== fast.value){
+  slow = slow.next;
+  fast = fast.next.next;
+  counter++;
+}
 
   // return the loop
 }
